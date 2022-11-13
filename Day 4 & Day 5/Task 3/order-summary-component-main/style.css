@@ -119,20 +119,21 @@ body {
   }
   .card {
     width: 300px;
-}
-.card-title{
-      font-size: 20px;
-}
-.card-content{
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-content {
     font-size: 12px;
   }
-  .card-plan{
-  font-size: 12px;
-}
-.card-plan div.plan{
-      padding-left: 10px;
-}
-.change-btn,
-.card-order{
-      font-size: 15px;
+  .card-plan {
+    font-size: 12px;
+  }
+  .card-plan div.plan {
+    padding-left: 10px;
+  }
+  .change-btn,
+  .card-order {
+    font-size: 15px;
+  }
 }
