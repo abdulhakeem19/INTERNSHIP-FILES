@@ -108,3 +108,31 @@ body {
 .card-order:hover {
   color: var(--Dark-blue);
 }
+@media (max-width: 450px) {
+  .wrapper {
+    background: url(./images/pattern-background-mobile.svg) !important;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+    background-color: var(--Pale-blue) !important;
+  }
+  .card {
+    width: 300px;
+}
+.card-title{
+      font-size: 20px;
+}
+.card-content{
+    font-size: 12px;
+  }
+  .card-plan{
+  font-size: 12px;
+}
+.card-plan div.plan{
+      padding-left: 10px;
+}
+.change-btn,
+.card-order{
+      font-size: 15px;
+}
