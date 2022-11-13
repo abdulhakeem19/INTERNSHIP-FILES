@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+body {
+  background-color: var(--Very-Light-Gray);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
+.page-top {
+  text-align: center;
+  margin: 50px 0;
+}
+.page-top h1 {
+  padding: 10px 0;
+}
+.page-top p {
+  max-width: 26rem;
+  font-size: 12px;
+  color: var(--Grayish-Blue);
+}
+span.text-light {
+  color: var(--Very-Dark-Blue);
+  font-weight: 200;
+}
+.page-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 20%);
+  width: 280px;
+  height: max-content;
+  padding: 20px 30px;
+  border-top: 5px solid black;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+.card:nth-child(1) {
+  border-top: 5px solid var(--Cyan);
+}
+.card-center .card:nth-child(1) {
+  border-top: 5px solid var(--Red);
+}
+.card-center .card:nth-child(2) {
+  border-top: 5px solid var(--Orange);
+}
+.card:nth-child(3) {
+  border-top: 5px solid var(--Blue);
+}
+.card-title {
+  font-weight: 700;
+}
+.card-body {
+  font-size: 11px;
+  color: var(--Grayish-Blue);
+  padding-top: 5px;
+}
+.card-icon {
+  width: 40px;
+  margin-left: auto;
+  padding-top: 30px;
+}
+
+@media (max-width: 375px) {
+  .page-top {
+    text-align: center;
+    margin: 50px 0;
+    padding: 6px 45px;
+  }
+  .page-top h1 {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  .page-bottom {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .page-top p {
+    max-width: 16rem;
+  }
+}
+
+@media (max-width: 967px) {
+  .page-bottom {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .page-top p {
+    max-width: 23rem;
+  }
+}

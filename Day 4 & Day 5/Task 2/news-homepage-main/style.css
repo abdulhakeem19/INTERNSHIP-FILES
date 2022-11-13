@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  /* ### Neutral */
+
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+hr {
+  opacity: 0.2;
+  margin: 30px 0;
+}
+button {
+  font-family: "Inter", sans-serif;
+  padding: 10px 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--Off-white);
+  background-color: var(--Soft-red);
+  border: none;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: black;
+}
+.mob-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--Off-white);
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.mob-sidebar a {
+  text-decoration: none;
+  padding: 8px 8px 25px 32px;
+  font-size: 25px;
+  color: var(--Very-dark-blue);
+  display: block;
+  transition: 0.3s;
+}
+
+.mob-sidebar a:hover {
+  color: var(--Soft-red);
+}
+.mob-sidebar .openbtn {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.mob-sidebar .closebtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto 50px;
+}
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.grid-2 {
+  background-color: var(--Very-dark-blue);
+  padding: 20px 15px;
+  /* margin-bottom: auto; */
+}
+.grid-2 h2 {
+  color: var(--Soft-orange);
+  padding-bottom: 30px;
+}
+.grid-2 h3 {
+  color: var(--Off-white);
+  padding-bottom: 10px;
+}
+.grid-2 h3:hover {
+  color: var(--Soft-orange);
+}
+.grid-2 p {
+  font-size: 15px;
+  max-width: 300px;
+  color: var(--Dark-grayish-blue);
+}
+
+.grid-col-2 {
+  grid-column: span 2;
+}
+.grid-row-2 {
+  grid-row: span 2;
+}
+.grid-3 h1 {
+  font-weight: 800;
+  font-size: 40px;
+}
+.grid-4 p {
+  padding-bottom: 25px;
+  color: var(--Dark-grayish-blue);
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.nav-items {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav-link {
+  color: var(--Dark-grayish-blue);
+  transition: 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--Soft-red);
+}
+.flex-box {
+  display: flex;
+  gap: 35px;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  display: flex;
+  gap: 15px;
+}
+.card-img {
+  width: 75px;
+  height: auto;
+}
+.card-no {
+  font-size: 25px;
+  color: var(--Grayish-blue);
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.card-title {
+  font-weight: 800;
+  padding-bottom: 10px;
+  transition: 0.3s;
+}
+.card-title:hover {
+  color: var(--Soft-red);
+}
+.card-content {
+  max-width: 195px;
+  font-size: 13px;
+  color: var(--Dark-grayish-blue);
+}
+
+@media (max-width: 451px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    padding: 5px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .grid-mob {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  ul.nav-items {
+    display: none;
+  }
+  .openbtn {
+    padding: 10px 10px;
+  }
+  .mob-sidebar .closebtn {
+    top: 10px;
+    right: 10px;
+    padding: 0;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+
+  .grid-2,
+  .grid-4 {
+    margin-bottom: 40px;
+  }
+  .grid-col-2 {
+    grid-column: auto;
+  }
+  .grid-3 {
+    grid-area: 2/1;
+    width: 365px;
+  }
+  .grid-4 {
+    grid-area: 3;
+  }
+
+  .flex-box {
+    flex-direction: column;
+  }
+  .card {
+    gap: 40px;
+  }
+}
+@media (min-width: 450px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .openbtn {
+    display: none;
+  }
+}

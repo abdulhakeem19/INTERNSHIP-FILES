@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-top">
+            <div class="toggle-text"><span>LOG IN</span> <span>SIGN UP</span></div>
+            <label class="switch">
+                <input class="switch-btn" type="checkbox">
+                <span class="slider round" onclick="switching()"></span>
+            </label>
+        </div>
+
+        <div class="form-main">
+            <div class="form-inner">
+                <div class="form-front">
+                    <form action="#">
+                        <h2>Log In</h2>
+                        <div class="form-group">
+                            <i><img src="at-sign.png" alt=""></i>
+                            <input type="text" value="Your Name" onfocus="(this.value=='Your Name') && (this.value='')"
+                                onblur="(this.value=='') && (this.value='Your Name')" />
+                        </div>
+                        <div class="form-group">
+                            <i><img src="padlock.png" alt=""></i>
+                            <input type="text" value="Your Password"
+                                onfocus="(this.value=='Your Password') && (this.value='')"
+                                onblur="(this.value=='') && (this.value='Your Password')" />
+                        </div>
+                        <button>Submit</button>
+                        <p>Forget your password?</p>
+                    </form>
+                </div>
+                <div class="form-back">
+                    <form action="#">
+                        <h2>Sign Up</h2>
+                        <div class="form-group">
+                            <i><img src="user.png" alt=""></i>
+                            <input type="text" value="Your Full Name"
+                                onfocus="(this.value=='Your Full Name') && (this.value='')"
+                                onblur="(this.value=='') && (this.value='Your Full Name')" />
+                        </div>
+                        <div class="form-group">
+                            <i><img src="at-sign.png" alt=""></i>
+                            <input type="text" value="Your Email"
+                                onfocus="(this.value=='Your Email') && (this.value='')"
+                                onblur="(this.value=='') && (this.value='Your Email')" />
+                        </div>
+                        <div class="form-group">
+                            <i><img src="padlock.png" alt=""></i>
+                            <input type="text" value="Your Password"
+                                onfocus="(this.value=='Your Password') && (this.value='')"
+                                onblur="(this.value=='') && (this.value='Your Password')" />
+                        </div>
+                        <button>Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function switching() {
+            const forminner = document.querySelector(".form-inner");
+            forminner.classList.toggle('switch-trigger');
+        }
+        console.log(switching);
+    </script>
+</body>
+
+</html>

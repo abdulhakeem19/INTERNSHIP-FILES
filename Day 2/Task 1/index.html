@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <div class="main-tab">
+        <div class="tab">
+            <button class="tabBtn" onclick="ftab(event,'tab1')">tab 1</button>
+            <button class="tabBtn" onclick="ftab(event,'tab2')">tab 2</button>
+            <button class="tabBtn" onclick="ftab(event,'tab3')">tab 3</button>
+        </div>
+        <div id="tab1" class="tabContent">
+            <h3>Hello</h3>
+        </div>
+        <div id="tab2" class="tabContent">
+            <h3>Welcome to</h3>
+        </div>
+        <div id="tab3" class="tabContent">
+            <h3>Webdevelopment</h3>
+        </div>
+    </div>
+</body>
+<script>
+    function ftab(evt, tabName) {
+        // Declare all variables
+        var i, tabContent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabContent = document.getElementsByClassName("tabContent");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tabBtn = document.getElementsByClassName("tabBtn");
+        for (i = 0; i < tabBtn.length; i++) {
+            tabBtn[i].className = tabBtn[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>

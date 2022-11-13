@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(230, 248, 255);
+  display: flex;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #313131;
+  position: relative;
+}
+.toggle-text {
+  position: absolute;
+  top: 65px;
+  left: 160px;
+  color: white;
+  font-weight: 600;
+}
+.toggle-text span {
+  padding-left: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 15px;
+  top: 100px;
+  left: 215px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fcf15d;
+  transition: 0.4s;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 0;
+  bottom: -5px;
+  background-color: rgb(19, 0, 192);
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #fcf15d;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #313131;
+}
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.form-top {
+  position: relative;
+  top: -5px;
+  left: 425px;
+}
+.form-main {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #313131;
+  perspective: 1000px;
+}
+.form-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.form-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.form-front,
+.form-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.form-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.switch-trigger {
+  transform: rotateY(180deg);
+}
+.modalform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #313131;
+}
+form {
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+  background-color: #424242;
+  padding: 20px 10px;
+}
+form h2 {
+  text-align: center;
+  margin: 20px auto 30px;
+  color: #fff;
+}
+input {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 50px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  color: #e4e4e4;
+  background-color: #313131;
+}
+
+button {
+  cursor: pointer;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 15px;
+  background-color: #fcf15d;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+button:hover {
+  background-color: rgb(3, 3, 226);
+  color: #fff;
+}
+button + p {
+  color: #e4e4e4;
+  font-size: 13px;
+  margin: 15px auto 20px;
+}
+button + p:hover {
+  color: #fcf15d;
+}
+::placeholder {
+  padding-left: 20px;
+}
+.form-group {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+}
+i img {
+  width: 20px;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  margin-right: 5px;
+  left: 15px;
+}
